@@ -1,0 +1,14 @@
+# Личные файлы пользователя — не для публикации.
+# Создаются из образцов: profile.example.md, learned.example.md
+reference/profile.md
+learned.md
+
+# Результаты разборов и журналы решений, если вдруг окажутся в папке скилла
+decisions.md
+_working/
+_published/
+
+# Служебное
+.DS_Store
+Thumbs.db
+__pycache__/
