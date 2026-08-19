@@ -45,14 +45,27 @@
 
 ## Установка
 
-Нужен установленный [Claude Code](https://docs.claude.com/en/docs/claude-code).
+Нужен агент, понимающий скиллы (`SKILL.md` — открытый стандарт). Пример — [Claude Code](https://docs.claude.com/en/docs/claude-code):
 
 ```bash
 git clone https://github.com/AnDeulin/panel.git ~/.claude/skills/panel
 ```
 
-Это всё — панель уже работает. В новом диалоге Claude Code задайте сложный вопрос, и она
-соберётся сама. Или позовите вручную: `/panel`, `/panel quick`, `/panel full`.
+Это всё — панель уже работает. В новом диалоге задайте сложный вопрос, и она соберётся сама.
+Или позовите вручную: `/panel`, `/panel quick`, `/panel full`.
+
+### В Codex, Cursor и других агентах
+
+Тот же скилл работает в Codex CLI, Cursor, Gemini и других — формат `SKILL.md` общий для всех.
+Отличается только папка, куда клонировать. Для Codex:
+
+```bash
+git clone https://github.com/AnDeulin/panel.git ~/.codex/skills/panel
+```
+
+Дальше так же: агент сам подхватит скилл и вызовет его по `/panel` или по фразе «собери панель».
+Чтобы панель собиралась автоматически на сложные вопросы (без команды), добавьте строчку про
+вызов скилла `panel` в `~/.codex/AGENTS.md` — у Codex это аналог `CLAUDE.md`.
 
 ### (по желанию) Настроить под себя
 
