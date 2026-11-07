@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "version": "example-1",
+  "brand": "Example Workshop",
+  "assistantName": "Workshop assistant",
+  "launcherLabel": "Ask about the workshop",
+  "questionLabel": "Your question",
+  "questionPlaceholder": "What would you like to know?",
+  "enrollLead": "I would like to join.",
+  "handoffLead": "Question for the organizer.",
+  "greeting": "Ask about the example workshop or select a topic.",
+  "telegramUsername": "YOUR_TELEGRAM",
+  "privacyUrl": "/privacy/",
+  "enrollLabel": "Contact the organizer",
+  "enrollText": "Hello. I would like to discuss joining the workshop.",
+  "suggestedIds": [
+    "audience",
+    "format",
+    "price"
+  ],
+  "messages": {
+    "handoff": "The approved information does not answer this question. You can contact the organizer.",
+    "out_of_scope": "This assistant answers questions about the workshop.",
+    "clarify": "What would you like to know about the workshop?",
+    "error": "You can select an available topic or contact the organizer."
+  },
+  "cards": [
+    {
+      "id": "audience",
+      "title": "Who can join",
+      "answer": "This fictional example is a beginner workshop. Replace this statement with your approved facts.",
+      "patterns": [
+        "who.{0,15}join",
+        "beginner",
+        "audience"
+      ],
+      "excludePatterns": [
+        "guarantee",
+        "job",
+        "certificate"
+      ],
+      "examples": [
+        "Who can join?"
+      ],
+      "handoff": false,
+      "approved": true,
+      "source": "Fictional configuration example",
+      "approvedAt": "2026-11-07",
+      "nearMisses": [
+        "Is there a guaranteed job for beginners?"
+      ]
+    },
+    {
+      "id": "format",
+      "title": "Format",
+      "answer": "The fictional example uses live online sessions. Replace this statement with your approved facts.",
+      "patterns": [
+        "format",
+        "online",
+        "where"
+      ],
+      "excludePatterns": [
+        "forever",
+        "recording",
+        "download"
+      ],
+      "examples": [
+        "Is it online?"
+      ],
+      "handoff": false,
+      "approved": true,
+      "source": "Fictional configuration example",
+      "approvedAt": "2026-11-07",
+      "nearMisses": [
+        "Are all online recordings available forever?"
+      ]
+    },
+    {
+      "id": "price",
+      "title": "Price",
+      "answer": "The organizer confirms the current price before enrollment.",
+      "patterns": [
+        "price",
+        "cost",
+        "how much"
+      ],
+      "excludePatterns": [
+        "cryptocurrency",
+        "payment",
+        "refund",
+        "discount"
+      ],
+      "examples": [
+        "What is the price?"
+      ],
+      "handoff": true,
+      "approved": true,
+      "source": "Fictional configuration example",
+      "approvedAt": "2026-11-07",
+      "nearMisses": [
+        "Can I pay the price in cryptocurrency?"
+      ]
+    }
+  ]
+}
